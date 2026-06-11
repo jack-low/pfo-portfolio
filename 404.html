@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — ページが見つかりません | jack-low</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#04060d">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;800&family=Noto+Sans+JP:wght@400;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .nf { min-height: 100vh; display: grid; place-items: center; text-align: center; position: relative; z-index: 2; padding: 24px; }
+  .nf .code { font-family: var(--font-disp); font-weight: 800; font-size: clamp(80px, 18vw, 180px); line-height: 1; color: var(--cyan); text-shadow: var(--glow-cyan); }
+  .nf h1 { font-family: var(--font-jp); font-weight: 700; font-size: clamp(20px, 3vw, 28px); margin: 10px 0 6px; }
+  .nf p { color: var(--ink-dim); font-family: var(--font-jp); margin-bottom: 26px; }
+  .nf .path { font-family: var(--font-mono); font-size: 13px; color: var(--ink-faint); margin-bottom: 22px; }
+</style>
+</head>
+<body>
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="atmosphere" aria-hidden="true"></div>
+<div class="grid-overlay" aria-hidden="true"></div>
+<div class="vignette" aria-hidden="true"></div>
+
+<main class="nf">
+  <div>
+    <div class="code">404</div>
+    <h1>ページが見つかりません</h1>
+    <p>お探しのページは移動または削除された可能性があります。</p>
+    <p class="path"><span style="color:var(--magenta)">&gt;_</span> route not found</p>
+    <a href="/" class="btn btn-primary"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M9 22V12h6v10"/></svg>ホームへ戻る</a>
+  </div>
+</main>
+
+<div class="scanlines" aria-hidden="true"></div>
+<script src="js/background.js"></script>
+</body>
+</html>
