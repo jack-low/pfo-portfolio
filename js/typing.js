@@ -1,25 +1,22 @@
-/* typing.js — hero terminal types out main.py, then shows output */
+/* typing.js - fixed-height terminal loop */
 (function () {
   const body = document.getElementById('terminal-body');
   if (!body) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // tokenized source: each line is an array of {c: class, t: text}
   const lines = [
-    [{ c: 'tok-com', t: '# main.py' }],
-    [{ c: 'tok-kw', t: 'import' }, { c: '', t: ' os' }],
-    [{ c: 'tok-kw', t: 'from' }, { c: '', t: ' dotenv ' }, { c: 'tok-kw', t: 'import' }, { c: '', t: ' load_dotenv' }],
-    [{ c: 'tok-kw', t: 'from' }, { c: '', t: ' openai ' }, { c: 'tok-kw', t: 'import' }, { c: '', t: ' OpenAI' }],
+    [{ c: 'tok-com', t: '# 今日も面倒をコードに押しつける' }],
+    [{ c: 'tok-kw', t: 'from' }, { c: '', t: ' reality ' }, { c: 'tok-kw', t: 'import' }, { c: 'tok-var', t: ' 面倒' }],
+    [{ c: 'tok-kw', t: 'from' }, { c: '', t: ' caffeine ' }, { c: 'tok-kw', t: 'import' }, { c: 'tok-var', t: ' 判断力' }],
     [],
-    [{ c: 'tok-fn', t: 'load_dotenv' }, { c: '', t: '()' }],
-    [{ c: 'tok-var', t: 'client' }, { c: '', t: ' = ' }, { c: 'tok-fn', t: 'OpenAI' }, { c: '', t: '()' }],
+    [{ c: 'tok-kw', t: 'def' }, { c: '', t: ' ' }, { c: 'tok-fn', t: 'work' }, { c: '', t: '(' }, { c: 'tok-var', t: 'request' }, { c: '', t: '):' }],
+    [{ c: '', t: '    ' }, { c: 'tok-kw', t: 'while' }, { c: '', t: ' request.' }, { c: 'tok-fn', t: 'is_annoying' }, { c: '', t: '():' }],
+    [{ c: '', t: '        request = ' }, { c: 'tok-fn', t: 'automate' }, { c: '', t: '(request)' }],
+    [{ c: '', t: '    ' }, { c: 'tok-kw', t: 'return' }, { c: 'tok-str', t: ' "人間はコーヒーを飲む"' }],
     [],
-    [{ c: 'tok-kw', t: 'def' }, { c: ' ', t: ' ' }, { c: 'tok-fn', t: 'run' }, { c: '', t: '(' }, { c: 'tok-var', t: 'prompt' }, { c: '', t: '):' }],
-    [{ c: '', t: '    ' }, { c: 'tok-var', t: 'res' }, { c: '', t: ' = client.chat.completions.' }, { c: 'tok-fn', t: 'create' }, { c: '', t: '(' }],
-    [{ c: '', t: '        model=' }, { c: 'tok-str', t: '"gpt-4o-mini"' }, { c: '', t: ',' }],
-    [{ c: '', t: '        messages=[{' }, { c: 'tok-str', t: '"role"' }, { c: '', t: ': ' }, { c: 'tok-str', t: '"user"' }, { c: '', t: ', ' }, { c: 'tok-str', t: '"content"' }, { c: '', t: ': prompt}]' }],
-    [{ c: '', t: '    )' }],
-    [{ c: '', t: '    ' }, { c: 'tok-kw', t: 'return' }, { c: '', t: ' res.choices[' }, { c: 'tok-num', t: '0' }, { c: '', t: '].message.content' }],
+    [{ c: 'tok-var', t: 'deadline' }, { c: '', t: ' = ' }, { c: 'tok-fn', t: 'estimate' }, { c: '', t: '(' }, { c: 'tok-str', t: '"昨日"' }, { c: '', t: ')' }],
+    [{ c: 'tok-var', t: 'result' }, { c: '', t: ' = ' }, { c: 'tok-fn', t: 'work' }, { c: '', t: '(' }, { c: 'tok-var', t: '面倒' }, { c: '', t: ')' }],
+    [{ c: 'tok-fn', t: 'deploy' }, { c: '', t: '(' }, { c: 'tok-var', t: 'result' }, { c: '', t: ', ' }, { c: 'tok-var', t: 'tests' }, { c: '', t: '=' }, { c: 'tok-kw', t: 'True' }, { c: '', t: ')' }],
   ];
 
   const caret = document.createElement('span');
@@ -39,6 +36,7 @@
 
   async function type() {
     if (reduce) { renderInstant(); return; }
+    body.textContent = '';
     for (let i = 0; i < lines.length; i++) {
       const lineEl = makeLine(i);
       body.appendChild(lineEl);
@@ -49,29 +47,32 @@
         lineEl.insertBefore(span, caret);
         for (const ch of tok.t) {
           span.textContent += ch;
-          await sleep(11 + Math.random() * 22);
+          await sleep(10 + Math.random() * 18);
         }
       }
-      await sleep(60);
+      await sleep(45);
     }
     caret.remove();
     // output block
     const out = document.createElement('div');
     out.className = 'term-out';
-    out.innerHTML = '<span class="pfx">$</span> python main.py';
+    out.innerHTML = '<span class="pfx">$</span> python main.py --no-meetings';
     body.appendChild(out);
     await sleep(400);
     const ok = document.createElement('div');
     ok.className = 'term-out';
     ok.style.color = 'var(--cyan)';
-    ok.textContent = '仕組み化、効率化。';
+    ok.textContent = '面倒: 0件 / コーヒー: 1杯 / テスト: PASS';
     body.appendChild(ok);
     await sleep(300);
     const done = document.createElement('div');
     done.className = 'term-out';
-    done.innerHTML = '<span class="pfx">&gt;</span> Done. ' ;
+    done.innerHTML = '<span class="pfx">&gt;</span> 定時なので、本番だけ見て帰ります。 ' ;
     done.appendChild(caret);
     body.appendChild(done);
+    await sleep(4200);
+    caret.remove();
+    type();
   }
 
   function renderInstant() {
@@ -87,7 +88,7 @@
     });
     const out = document.createElement('div');
     out.className = 'term-out';
-    out.innerHTML = '<span class="pfx">$</span> python main.py<br>仕組み化、効率化。<br><span class="pfx">&gt;</span> Done.';
+    out.innerHTML = '<span class="pfx">$</span> python main.py --no-meetings<br>面倒: 0件 / コーヒー: 1杯 / テスト: PASS<br><span class="pfx">&gt;</span> 定時なので、本番だけ見て帰ります。';
     body.appendChild(out);
   }
 

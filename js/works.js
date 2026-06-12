@@ -41,7 +41,7 @@
       desc: 'AIエージェントの導入、権限、購入、履歴を一つの体験にまとめるコマース基盤。',
       tags: ['React', 'FastAPI', 'PostgreSQL', 'Stripe'],
       image: 'assets/projects/solo-map.png',
-      link: 'https://solo-map.app'
+      link: 'https://demo.solo-map.app'
     }
   ];
 

@@ -59,6 +59,7 @@
 
 /* terminal */
 .terminal {
+  height: 306px;
   font-family: var(--font-mono);
   font-size: 12.5px;
   line-height: 1.55;
@@ -80,7 +81,7 @@ html[data-theme="light"] .terminal { background: rgba(245,248,255,.92); }
 .terminal-bar .d.y { background: #febc2e; }
 .terminal-bar .d.g { background: #28c840; }
 .terminal-bar .fn { margin-left: 8px; color: var(--ink-faint); font-size: 11px; }
-.terminal-body { padding: 14px 16px; min-height: 250px; }
+.terminal-body { height: 263px; padding: 14px 16px; overflow: hidden; }
 .code-line { white-space: pre; color: var(--ink-dim); }
 .code-line .ln { color: var(--ink-faint); display: inline-block; width: 22px; user-select: none; }
 .tok-kw { color: var(--magenta); }
