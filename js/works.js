@@ -13,7 +13,7 @@
       desc: '承認、監査ログ、Telegram画像送受信まで備えた、Codex向けリモート支援基盤。',
       tags: ['TypeScript', 'WebSocket', 'Telegram', 'LM Studio'],
       image: 'assets/projects/remote-support.png',
-      link: ''
+      link: 'https://github.com/jack-low/codex-remote-support'
     },
     {
       title: 'AI VTuber Control',
@@ -34,7 +34,7 @@
       desc: '動画研修、設問、受講結果を軽量構成で扱う、DBレスの社内研修Webシステム。',
       tags: ['PHP', 'JavaScript', 'Nginx', 'Docker'],
       image: 'assets/projects/training-cbt.png',
-      link: 'https://github.com/jack-low/tccr'
+      link: ''
     },
     {
       title: 'solo-map AI Commerce',
