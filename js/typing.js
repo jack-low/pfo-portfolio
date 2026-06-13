@@ -50,6 +50,9 @@
   function followOutput() {
     body.scrollTop = body.scrollHeight;
     body.scrollLeft = horizontalPosition;
+    requestAnimationFrame(() => {
+      body.scrollLeft = horizontalPosition;
+    });
   }
 
   async function type() {
