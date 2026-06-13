@@ -37,7 +37,7 @@
   function followOutput() {
     body.scrollTo({
       top: body.scrollHeight,
-      left: body.scrollWidth,
+      left: body.scrollLeft,
       behavior: 'auto'
     });
   }
