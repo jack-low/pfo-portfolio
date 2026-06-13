@@ -81,7 +81,22 @@ html[data-theme="light"] .terminal { background: rgba(245,248,255,.92); }
 .terminal-bar .d.y { background: #febc2e; }
 .terminal-bar .d.g { background: #28c840; }
 .terminal-bar .fn { margin-left: 8px; color: var(--ink-faint); font-size: 11px; }
-.terminal-body { height: 263px; padding: 14px 16px; overflow: hidden; }
+.terminal-body {
+  height: 263px;
+  padding: 14px 16px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) rgba(6, 11, 24, .45);
+  overscroll-behavior: contain;
+}
+.terminal-body::-webkit-scrollbar { width: 8px; height: 8px; }
+.terminal-body::-webkit-scrollbar-track { background: rgba(6, 11, 24, .45); }
+.terminal-body::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border: 2px solid rgba(6, 11, 24, .45);
+  border-radius: 999px;
+}
+.terminal-body::-webkit-scrollbar-corner { background: rgba(6, 11, 24, .45); }
 .code-line { white-space: pre; color: var(--ink-dim); }
 .code-line .ln { color: var(--ink-faint); display: inline-block; width: 22px; user-select: none; }
 .tok-kw { color: var(--magenta); }

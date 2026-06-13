@@ -34,19 +34,30 @@
 
   async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
+  function followOutput() {
+    body.scrollTo({
+      top: body.scrollHeight,
+      left: body.scrollWidth,
+      behavior: 'auto'
+    });
+  }
+
   async function type() {
     if (reduce) { renderInstant(); return; }
     body.textContent = '';
+    body.scrollTo(0, 0);
     for (let i = 0; i < lines.length; i++) {
       const lineEl = makeLine(i);
       body.appendChild(lineEl);
       lineEl.appendChild(caret);
+      followOutput();
       for (const tok of lines[i]) {
         const span = document.createElement('span');
         if (tok.c) span.className = tok.c;
         lineEl.insertBefore(span, caret);
         for (const ch of tok.t) {
           span.textContent += ch;
+          followOutput();
           await sleep(10 + Math.random() * 18);
         }
       }
@@ -58,18 +69,21 @@
     out.className = 'term-out';
     out.innerHTML = '<span class="pfx">$</span> python main.py --no-meetings';
     body.appendChild(out);
+    followOutput();
     await sleep(400);
     const ok = document.createElement('div');
     ok.className = 'term-out';
     ok.style.color = 'var(--cyan)';
     ok.textContent = '面倒: 0件 / コーヒー: 1杯 / テスト: PASS';
     body.appendChild(ok);
+    followOutput();
     await sleep(300);
     const done = document.createElement('div');
     done.className = 'term-out';
     done.innerHTML = '<span class="pfx">&gt;</span> 定時なので、本番だけ見て帰ります。 ' ;
     done.appendChild(caret);
     body.appendChild(done);
+    followOutput();
     await sleep(4200);
     caret.remove();
     type();
@@ -90,6 +104,7 @@
     out.className = 'term-out';
     out.innerHTML = '<span class="pfx">$</span> python main.py --no-meetings<br>面倒: 0件 / コーヒー: 1杯 / テスト: PASS<br><span class="pfx">&gt;</span> 定時なので、本番だけ見て帰ります。';
     body.appendChild(out);
+    followOutput();
   }
 
   // start typing once hero terminal is on screen
