@@ -35,11 +35,7 @@
   async function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
   function followOutput() {
-    body.scrollTo({
-      top: body.scrollHeight,
-      left: body.scrollLeft,
-      behavior: 'auto'
-    });
+    body.scrollTop = body.scrollHeight;
   }
 
   async function type() {
