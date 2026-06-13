@@ -3,6 +3,19 @@
   const body = document.getElementById('terminal-body');
   if (!body) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let horizontalPosition = 0;
+  let pointerScrolling = false;
+
+  body.addEventListener('pointerdown', () => { pointerScrolling = true; });
+  window.addEventListener('pointerup', () => { pointerScrolling = false; });
+  body.addEventListener('scroll', () => {
+    if (pointerScrolling) horizontalPosition = body.scrollLeft;
+  }, { passive: true });
+  body.addEventListener('wheel', (event) => {
+    if (Math.abs(event.deltaX) > 0 || event.shiftKey) {
+      requestAnimationFrame(() => { horizontalPosition = body.scrollLeft; });
+    }
+  }, { passive: true });
 
   const lines = [
     [{ c: 'tok-com', t: '# 今日も面倒をコードに押しつける' }],
@@ -36,6 +49,7 @@
 
   function followOutput() {
     body.scrollTop = body.scrollHeight;
+    body.scrollLeft = horizontalPosition;
   }
 
   async function type() {
