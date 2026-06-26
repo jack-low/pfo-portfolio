@@ -1,52 +1,31 @@
-<!DOCTYPE html>
-<html lang="ja" data-theme="dark">
+<!doctype html>
+<html lang="ja" data-variant="a">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ===== Primary meta ===== -->
 <title>jack-low — Engineer / Creator / Problem Solver</title>
-<meta name="description" content="AIと自動化で日々の「面倒」を仕組みに変えるエンジニア jack-low のポートフォリオ。Python・AI/LLM・Docker・Web を軸に、自動化・効率化・可視化を手掛けています。">
+<meta name="description" content="AIと自動化で日々の面倒を仕組みに変えるエンジニア jack-low のポートフォリオ。Python・AI/LLM・Docker・Web を軸に、自動化・効率化・可視化を手掛けています。">
 <meta name="author" content="jack-low">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#04060d" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#eef2fb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#f6f6f3">
 <link rel="canonical" href="https://pfo.solo-map.app/">
 
-<!-- ===== Open Graph ===== -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="jack-low — Portfolio">
 <meta property="og:title" content="jack-low — Engineer / Creator / Problem Solver">
-<meta property="og:description" content="AIと自動化で日々の「面倒」を仕組みに変えるエンジニア jack-low のポートフォリオ。">
+<meta property="og:description" content="AIと自動化で日々の面倒を仕組みに変えるエンジニア jack-low のポートフォリオ。">
 <meta property="og:url" content="https://pfo.solo-map.app/">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://pfo.solo-map.app/assets/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="jack-low — Engineer / Creator / Problem Solver">
-
-<!-- ===== Twitter/X card ===== -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="jack-low — Engineer / Creator / Problem Solver">
-<meta name="twitter:description" content="AIと自動化で日々の「面倒」を仕組みに変えるエンジニア jack-low のポートフォリオ。">
-<meta name="twitter:image" content="https://pfo.solo-map.app/assets/og-image.png">
 
-<!-- ===== Icons / manifest ===== -->
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="icon" href="/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<link rel="manifest" href="/site.webmanifest">
-
-<!-- ===== Fonts ===== -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-
-<!-- ===== Styles ===== -->
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Schibsted+Grotesk:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/sections.css">
 
-<!-- ===== Structured data ===== -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -54,308 +33,117 @@
   "name": "jack-low",
   "url": "https://pfo.solo-map.app/",
   "image": "https://pfo.solo-map.app/assets/og-image.png",
-  "jobTitle": "Engineer / Creator",
+  "jobTitle": "Engineer / Creator / Problem Solver",
   "email": "mailto:contact@solo-map.app",
-  "knowsAbout": ["Python", "AI", "LLM", "Docker", "JavaScript", "Web Development", "Automation"],
+  "knowsAbout": ["Python", "Docker", "JavaScript", "VBA", "AI", "LLM", "Web Development", "Automation", "Game Development"],
   "description": "AIと自動化で日々の面倒を仕組みに変えるエンジニア。"
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "jack-low — Portfolio",
-  "url": "https://pfo.solo-map.app/",
-  "inLanguage": "ja"
 }
 </script>
 </head>
 <body>
-
-<!-- skip link -->
 <a class="skip-link" href="#main">本文へスキップ</a>
 
-<!-- backdrop layers (decorative) -->
-<canvas id="bg-canvas" aria-hidden="true"></canvas>
-<div class="atmosphere" aria-hidden="true"></div>
-<div class="grid-overlay" aria-hidden="true"></div>
-<div class="vignette" aria-hidden="true"></div>
-
-<!-- ===== NAV ===== -->
-<nav class="nav" id="nav" aria-label="メインナビゲーション">
-  <a class="brand" href="#top"><span class="chev" aria-hidden="true">&gt;_</span> jack-low</a>
-  <ul class="nav-links">
-    <li><a href="#top" data-nav="top" class="active" aria-current="page">ホーム</a></li>
-    <li><a href="#about" data-nav="about">About</a></li>
-    <li><a href="#skills" data-nav="skills">スキル</a></li>
-    <li><a href="#works" data-nav="works">制作物</a></li>
-    <li><a href="#timeline" data-nav="timeline">活動履歴</a></li>
-    <li><a href="#contact" data-nav="contact">お問い合わせ</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="ダーク／ライトテーマ切替"><span class="knob" aria-hidden="true"></span></button>
-    <button class="burger" id="burger" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
-  </div>
-</nav>
-
-<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-  <a href="#top">ホーム</a>
-  <a href="#about">About</a>
-  <a href="#skills">スキル</a>
-  <a href="#works">制作物</a>
-  <a href="#timeline">活動履歴</a>
-  <a href="#contact">お問い合わせ</a>
+<div class="design-switcher" role="toolbar" aria-label="Design switcher">
+  <span>DESIGN</span>
+  <button type="button" data-set-variant="a" aria-pressed="true">A</button>
+  <button type="button" data-set-variant="b" aria-pressed="false">B</button>
+  <button type="button" data-set-variant="c" aria-pressed="false">C</button>
+  <i aria-hidden="true"></i>
+  <button type="button" data-toggle-lang aria-label="Toggle language">EN</button>
 </div>
 
-<!-- ===== RIGHT RAIL (decorative section index) ===== -->
-<nav class="rail" id="rail" aria-label="セクションナビゲーション">
-  <a href="#top" data-rail="top" class="active" tabindex="-1"><span class="meta"><span class="rn">01</span>TOP</span><span class="dot"></span></a>
-  <a href="#about" data-rail="about" tabindex="-1"><span class="meta"><span class="rn">02</span>ABOUT</span><span class="dot"></span></a>
-  <a href="#skills" data-rail="skills" tabindex="-1"><span class="meta"><span class="rn">03</span>SKILLS</span><span class="dot"></span></a>
-  <a href="#works" data-rail="works" tabindex="-1"><span class="meta"><span class="rn">04</span>WORKS</span><span class="dot"></span></a>
-  <a href="#timeline" data-rail="timeline" tabindex="-1"><span class="meta"><span class="rn">05</span>TIMELINE</span><span class="dot"></span></a>
-  <a href="#contact" data-rail="contact" tabindex="-1"><span class="meta"><span class="rn">06</span>CONTACT</span><span class="dot"></span></a>
-</nav>
+<header class="site-nav" aria-label="Primary">
+  <a class="brand" href="#top">
+    <img src="assets/jacklow-logo.png" alt="">
+    <span>jack-low</span>
+  </a>
+  <nav>
+    <a href="#profile" data-i18n="navProfile">Profile</a>
+    <a href="#skills" data-i18n="navSkills">Skills</a>
+    <a href="#works" data-i18n="navWorks">Works</a>
+    <a href="#contact" data-i18n="navContact">Contact</a>
+  </nav>
+</header>
 
-<main class="shell" id="main" tabindex="-1">
-
-<!-- ===== HERO ===== -->
-<section class="hero" id="top" data-screen-label="01 HERO">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="hero-eyebrow reveal-x">_engineer / <span class="b">creator</span> / problem solver</p>
-        <h1 class="reveal-x" style="--d:80ms"><span class="glitch" id="glitch-name" data-text="jack-low">jack-low</span></h1>
-        <p class="hero-lead reveal-x" style="--d:160ms">AI と人間の境界で、<br>面倒を<span class="hl">仕組み</span>に変える開発者。</p>
-        <p class="hero-desc reveal-x" style="--d:240ms">Python、AI、Docker、Web技術を組み合わせて、日々の「面倒」や「非効率」を価値あるツールと体験に変えるエンジニアです。自動化・効率化・可視化が得意です。</p>
-        <div class="hero-cta reveal-x" style="--d:320ms">
-          <a href="#works" class="btn btn-primary"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>制作物を見る</a>
-          <a href="#contact" class="btn btn-ghost"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>お問い合わせ</a>
-        </div>
-        <div class="tech-row reveal-x" style="--d:400ms">
-          <span class="chip" title="Python"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M11.9 0C6.5 0 6.8 2.4 6.8 2.4v2.4h5.2v.7H4.7S1 5.1 1 10.6s3.3 5.3 3.3 5.3h1.9v-2.6s-.1-3.3 3.2-3.3h5.2s3.1.1 3.1-3V3S18.4 0 11.9 0zM9 1.6c.5 0 .9.4.9.9s-.4.9-.9.9-.9-.4-.9-.9.4-.9.9-.9z"/><path d="M12.1 24c5.4 0 5.1-2.4 5.1-2.4v-2.4h-5.2v-.7h7.3s3.7.4 3.7-5.1-3.3-5.3-3.3-5.3h-1.9v2.6s.1 3.3-3.2 3.3H8.4s-3.1-.1-3.1 3v4.9S5.6 24 12.1 24zM15 22.4c-.5 0-.9-.4-.9-.9s.4-.9.9-.9.9.4.9.9-.4.9-.9.9z"/></svg></span>
-          <span class="chip" title="Docker"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 9.5c-.3-.2-1.4-.5-2.3-.3-.1-.9-.6-1.6-1.4-2.3l-.5-.4-.4.5c-.5.6-.7 1.6-.6 2.4 0 .3.2.8.4 1.2-.3.2-.9.4-1.6.4H1.5l-.1.5c-.2 1.4 0 2.9.7 4.2.7 1.4 1.9 2.4 3.4 2.9 1.6.6 4 .9 6.5 0 1.2-.4 2.3-1.1 3.2-2 .8-.9 1.4-1.9 1.8-3.1h.2c1.1 0 1.8-.4 2.2-.8.3-.3.5-.6.6-.9l.1-.3-.3-.2zM3.3 11.2h1.9v1.9H3.3zm2.4 0h1.9v1.9H5.7zm2.4 0H10v1.9H8.1zm2.4 0h1.9v1.9h-1.9zM5.7 9H7.6v1.9H5.7zm2.4 0H10v1.9H8.1zm2.4 0h1.9v1.9h-1.9zm0-2.2h1.9v1.9h-1.9z"/></svg></span>
-          <span class="chip" title="JavaScript"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h18v18H3V3zm9.9 14.5c.4.8 1 1.4 2.1 1.4 1 0 1.6-.5 1.6-1.1 0-.8-.6-1.1-1.7-1.5l-.6-.3c-1.7-.7-2.8-1.6-2.8-3.5 0-1.7 1.3-3 3.3-3 1.4 0 2.5.5 3.2 1.8l-1.8 1.1c-.4-.7-.8-1-1.4-1-.6 0-1 .4-1 1 0 .6.4.9 1.4 1.3l.6.3c2 .8 3.1 1.7 3.1 3.6 0 2.1-1.6 3.2-3.8 3.2-2.1 0-3.5-1-4.2-2.3l1.9-1.1zM5.6 17.7c.3.6.6 1.1 1.4 1.1.7 0 1.2-.3 1.2-1.4V9.9h2.2v7.5c0 2.3-1.3 3.3-3.3 3.3-1.8 0-2.8-.9-3.3-2.1l1.8-.9z"/></svg></span>
-          <span class="chip" title="AI / LLM"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="1.6"/><circle cx="19" cy="6" r="1.6"/><circle cx="5" cy="18" r="1.6"/><circle cx="19" cy="18" r="1.6"/><path d="M6.3 7l3.4 3.4M17.7 7l-3.4 3.4M6.3 17l3.4-3.4M17.7 17l-3.4-3.4"/></svg></span>
-          <span class="chip" title="Automation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12h4l2 6 4-12 2 6h4"/></svg></span>
-          <span class="chip" title="Web"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></span>
-        </div>
-      </div>
-
-      <div class="hero-stage">
-        <div class="hero-stage-top">
-          <!-- terminal -->
-          <div class="terminal reveal" style="--d:120ms">
-            <div class="terminal-bar"><span class="d r" aria-hidden="true"></span><span class="d y" aria-hidden="true"></span><span class="d g" aria-hidden="true"></span><span class="fn">~/jack-low/main.py</span></div>
-            <div class="terminal-body" id="terminal-body" aria-hidden="true"></div>
-          </div>
-          <!-- brain -->
-          <div class="brain-box reveal" style="--d:200ms">
-            <canvas id="brain-canvas" aria-hidden="true"></canvas>
-            <span class="brain-label">NEURAL.CORE</span>
-          </div>
-        </div>
-
-        <div class="stat-stack">
-          <div class="hero-stage-top" style="grid-template-columns:1fr 1fr">
-            <!-- system status -->
-            <div class="panel stat-card reveal" style="--d:260ms">
-              <div class="hd"><span>SYSTEM STATUS</span></div>
-              <div class="status-row"><span class="nm">AI / LLM</span><span class="st"><span class="pulse" aria-hidden="true"></span>ONLINE</span></div>
-              <div class="status-row"><span class="nm">AUTOMATION</span><span class="st"><span class="pulse" aria-hidden="true"></span>RUNNING</span></div>
-              <div class="status-row"><span class="nm">DOCKER</span><span class="st"><span class="pulse" aria-hidden="true"></span>HEALTHY</span></div>
-            </div>
-            <!-- projects count -->
-            <div class="panel stat-card reveal" style="--d:320ms">
-              <div class="hd"><span>PROJECTS</span></div>
-              <div class="bigstat">
-                <span class="num" data-count="7">0</span>
-                <div class="bars" aria-hidden="true"><i style="height:40%"></i><i style="height:62%"></i><i style="height:48%"></i><i style="height:80%"></i><i style="height:66%"></i><i style="height:100%"></i></div>
-              </div>
-            </div>
-          </div>
-          <!-- current focus (was a placeholder "latest commit") -->
-          <div class="panel stat-card commit reveal" style="--d:380ms">
-            <div class="hd"><span>CURRENT FOCUS</span></div>
-            <p class="msg">AI活用 × 業務自動化 × Web アプリ開発</p>
-            <div class="meta"><span class="hash">#ai-automation</span><span class="ago">継続中</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="scroll-cue" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
-  </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about" data-screen-label="02 ABOUT">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="about-text reveal-x">
-        <p class="sec-eyebrow"><span class="num">02</span> _about</p>
-        <h2 class="sec-title"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>About</h2>
-        <p>エンジニア兼クリエイターとして、ソフトウェア開発と自動化に取り組んでいます。</p>
-        <p>学生時代からゲームや自動化ツールを作るのが好きで、</p>
-        <p><span class="em">Webアプリ・インフラ・AI・自動化</span>まで幅広く手を動かしてきました。</p>
-        <p>面倒な作業を繰り返し仕組みに変え、誰かの時間を生むことがモットーです。</p>
-        <p>得意領域は<span class="em">ゲーム開発、モジュラーデザイン、ガジェット改造</span>。</p>
-        <p>技術活用とその仕組み化・拡張づくりを大切にしています。</p>
-        <div class="tags">
-          <span class="tag-pill">ENGINEER</span>
-          <span class="tag-pill">CREATOR</span>
-          <span class="tag-pill">AUTOMATION</span>
-          <span class="tag-pill">GAMER</span>
-        </div>
-      </div>
-      <div class="scene reveal-x reveal-r" style="--d:120ms">
-        <canvas id="scene-canvas" aria-hidden="true"></canvas>
-        <span class="tagline">// workstation.exe</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SKILLS ===== -->
-<section id="skills" data-screen-label="03 SKILLS">
-  <div class="wrap">
-    <p class="sec-eyebrow reveal"><span class="num">03</span> _skills</p>
-    <h2 class="sec-title reveal" style="--d:60ms"><span class="br" aria-hidden="true">&lt;/&gt;</span> Skills</h2>
-    <div class="skill-grid" style="margin-top:26px">
-      <div class="panel skill-card reveal"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--cyan)"><path d="M11.9 2C8.5 2 8.7 3.5 8.7 3.5v1.6h3.3v.5H7.5S5 5.3 5 8.8s2.2 3.4 2.2 3.4h1.3v-1.7s0-2.1 2.1-2.1h3.3s2 0 2-1.9V3.9S18 2 11.9 2z"/><path d="M12.1 22c3.4 0 3.2-1.5 3.2-1.5v-1.6h-3.3v-.5h4.5s2.5.2 2.5-3.3-2.2-3.4-2.2-3.4h-1.3v1.7s0 2.1-2.1 2.1H10.1s-2 0-2 1.9v3.6S6 22 12.1 22z"/></svg></div><div><h3>Python</h3><p>データ処理・自動化・AI開発まで幅広く対応</p></div></div>
-      <div class="panel skill-card reveal" style="--d:80ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6"><rect x="3" y="10" width="3" height="3"/><rect x="7" y="10" width="3" height="3"/><rect x="11" y="10" width="3" height="3"/><rect x="7" y="6" width="3" height="3"/><path d="M3 13c0 4 3 6 7 6 5 0 8-3 9-7 1 .2 2 0 2.5-.6"/></svg></div><div><h3>Docker</h3><p>環境構築・運用・コンテナ化を最適化</p></div></div>
-      <div class="panel skill-card reveal" style="--d:160ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="var(--cyan)"><path d="M4 4h16v16H4V4zm11 13c.3.5.7.9 1.5.9.7 0 1.1-.3 1.1-.8 0-.5-.4-.7-1.1-1l-.4-.2c-1.2-.5-2-1.1-2-2.4 0-1.2.9-2 2.3-2 1 0 1.7.3 2.2 1.2l-1.2.8c-.3-.5-.6-.7-1-.7s-.7.3-.7.7c0 .4.3.6.9.9l.4.2c1.4.6 2.1 1.2 2.1 2.5 0 1.4-1.1 2.2-2.6 2.2-1.4 0-2.4-.7-2.9-1.6l1.4-.9zM9 17.2c.2.4.4.7.9.7.5 0 .8-.2.8-1V12h1.5v5c0 1.5-.9 2.2-2.2 2.2-1.2 0-1.9-.6-2.3-1.4l1.3-.6z"/></svg></div><div><h3>JavaScript</h3><p>Webアプリ開発・インタラクティブ実装</p></div></div>
-      <div class="panel skill-card reveal" style="--d:240ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div><div><h3>VBA</h3><p>業務自動化・効率化・Excel連携を強化</p></div></div>
-      <div class="panel skill-card reveal" style="--d:80ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5"><circle cx="12" cy="12" r="2.5"/><circle cx="5" cy="7" r="1.4"/><circle cx="19" cy="7" r="1.4"/><circle cx="5" cy="17" r="1.4"/><circle cx="19" cy="17" r="1.4"/><path d="M6.2 7.8l3.6 3M17.8 7.8l-3.6 3M6.2 16.2l3.6-3M17.8 16.2l-3.6-3"/></svg></div><div><h3>AI / LLM</h3><p>LLM活用・プロンプト設計・RAG構築など</p></div></div>
-      <div class="panel skill-card reveal" style="--d:160ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg></div><div><h3>Web Development</h3><p>FastAPI・Flask・Next.jsなどモダンな開発を実践</p></div></div>
-      <div class="panel skill-card reveal" style="--d:240ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div><div><h3>Automation</h3><p>定型作業の自動化・スケジューリング・効率化設計</p></div></div>
-      <div class="panel skill-card reveal" style="--d:320ms"><span class="sweep" aria-hidden="true"></span><div class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="1.6"><rect x="2" y="7" width="20" height="10" rx="5"/><path d="M7 11v2M6 12h2M15 11.5h.01M18 13.5h.01"/></svg></div><div><h3>Game / Creative Tools</h3><p>ゲーム制作・ツール開発・ガジェット改造・デザイン</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== WORKS ===== -->
-<section id="works" data-screen-label="04 WORKS">
-  <div class="wrap">
-    <div class="works-head">
-      <div class="reveal">
-        <p class="sec-eyebrow"><span class="num">04</span> _works</p>
-        <h2 class="sec-title"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8"/></svg>Works</h2>
-      </div>
-      <p class="works-note reveal" style="--d:80ms">設計・実装・運用まで、一貫して手を動かしたプロジェクト</p>
-    </div>
-    <div class="works-rail" id="works-rail"></div>
-  </div>
-</section>
-
-<!-- ===== TIMELINE ===== -->
-<section id="timeline" data-screen-label="05 TIMELINE">
-  <div class="wrap">
-    <div class="timeline-grid">
-      <div class="reveal-x">
-        <p class="sec-eyebrow"><span class="num">05</span> _timeline</p>
-        <h2 class="sec-title"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>活動履歴</h2>
-        <!-- EDIT: 実際の年・出来事に差し替えてください（現状は事実ベースの概略） -->
-        <ul class="tl-list" style="margin-top:18px">
-          <li class="tl-item reveal"><span class="yr">2024</span><span class="ev">AI・LLMを活用した<span class="em">分析・効率化ツール</span>の開発に注力</span></li>
-          <li class="tl-item reveal" style="--d:80ms"><span class="yr">2023</span><span class="ev">データ取得から通知までの<span class="em">業務自動化パイプライン</span>を構築</span></li>
-          <li class="tl-item reveal" style="--d:160ms"><span class="yr">2023</span><span class="ev">Docker + FastAPI で開発・運用の基盤を整備</span></li>
-          <li class="tl-item reveal" style="--d:240ms"><span class="yr">2022</span><span class="ev">Python製のゲームを制作・公開</span></li>
-          <li class="tl-item reveal" style="--d:320ms"><span class="yr">2021</span><span class="ev">エンジニアとしての活動を本格化</span></li>
-          <li class="tl-item reveal" style="--d:400ms"><span class="yr">2020</span><span class="ev">独学でプログラミングを学び始める</span></li>
+<main id="main" tabindex="-1">
+  <section class="hero" id="top">
+    <div class="hero-copy">
+      <p class="eyebrow" data-i18n="eyebrow">engineer / creator / problem solver</p>
+      <h1>jack-low</h1>
+      <p class="headline"><span data-i18n="headlineA">AI と人間の境界で、</span><br><span data-i18n="headlineB">面倒を仕組みに変える開発者。</span></p>
+      <p class="lead" data-i18n="lead">Python、AI、Docker、Web技術を組み合わせて、日々の「面倒」や「非効率」を価値あるツールと体験に変えるエンジニアです。自動化・効率化・可視化が得意です。</p>
+      <div class="known-row" aria-label="Known for">
+        <span data-i18n="knownForLabel">俺と言えば</span>
+        <ul>
+          <li data-i18n="known1">自動化</li>
+          <li data-i18n="known2">ガジェット改造</li>
+          <li data-i18n="known3">ゲーム制作</li>
+          <li data-i18n="known4">AI活用</li>
         </ul>
       </div>
-      <div class="constellation reveal-x reveal-r" style="--d:120ms">
-        <canvas id="constellation-canvas" aria-hidden="true"></canvas>
+      <p class="focus"><span data-i18n="focusLabel">現在の注力</span> — <strong data-i18n="focus">AI活用 × 業務自動化 × Web アプリ開発</strong></p>
+      <div class="hero-actions">
+        <a class="primary-link" href="#works" data-i18n="viewWorks">制作物を見る</a>
+        <a class="secondary-link" href="mailto:contact@solo-map.app" data-i18n="contactMe">相談する</a>
       </div>
     </div>
-  </div>
-</section>
+    <figure class="hero-mark" aria-label="jack-low logo">
+      <img src="assets/jacklow-logo.png" alt="jack-low logo">
+    </figure>
+  </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" data-screen-label="06 CONTACT">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div class="reveal-x">
-        <p class="sec-eyebrow"><span class="num">06</span> _contact</p>
-        <h2 class="sec-title"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg>お問い合わせ</h2>
-        <p class="contact-lead">お仕事のご相談・ご依頼など、お気軽にご連絡ください。下記フォームから送信いただけます。</p>
-
-        <form id="contact-form" class="contact-form" novalidate>
-          <div class="field">
-            <label for="cf-name">お名前 <span class="req" aria-hidden="true">*</span></label>
-            <input id="cf-name" name="name" type="text" autocomplete="name" required maxlength="80" aria-required="true" aria-describedby="cf-name-err">
-            <p class="err" id="cf-name-err" role="alert"></p>
-          </div>
-          <div class="field">
-            <label for="cf-email">返信先メールアドレス <span class="req" aria-hidden="true">*</span></label>
-            <input id="cf-email" name="email" type="email" autocomplete="email" required maxlength="160" aria-required="true" aria-describedby="cf-email-err">
-            <p class="err" id="cf-email-err" role="alert"></p>
-          </div>
-          <div class="field">
-            <label for="cf-subject">件名</label>
-            <input id="cf-subject" name="subject" type="text" maxlength="120" aria-describedby="cf-subject-err">
-            <p class="err" id="cf-subject-err" role="alert"></p>
-          </div>
-          <div class="field">
-            <label for="cf-message">本文 <span class="req" aria-hidden="true">*</span></label>
-            <textarea id="cf-message" name="message" rows="5" required minlength="5" maxlength="4000" aria-required="true" aria-describedby="cf-message-err"></textarea>
-            <p class="err" id="cf-message-err" role="alert"></p>
-          </div>
-
-          <!-- honeypot: visually hidden, must stay empty -->
-          <div class="hp" aria-hidden="true">
-            <label>会社名（入力しないでください）<input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-          </div>
-
-          <div class="field consent">
-            <label class="checkbox"><input id="cf-consent" name="consent" type="checkbox" required aria-required="true"> <span>入力内容の送信に同意します <span class="req" aria-hidden="true">*</span></span></label>
-            <p class="err" id="cf-consent-err" role="alert"></p>
-          </div>
-
-          <!-- Cloudflare Turnstile: rendered only when a real site key is set in js/config.js -->
-          <div id="cf-turnstile" class="cf-turnstile-slot"></div>
-
-          <button type="submit" class="btn btn-primary" id="cf-submit"><svg class="mi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>送信する</button>
-          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-
-      <div class="contact-side reveal-x reveal-r" style="--d:120ms">
-        <div class="contact-art">
-          <canvas id="contact-canvas" aria-hidden="true"></canvas>
-        </div>
-        <a class="panel contact-card email-card" href="mailto:contact@solo-map.app">
-          <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><polyline points="3 7 12 13 21 7"/></svg></span>
-          <span><span class="lb">EMAIL</span><br><span class="vl">contact@solo-map.app</span></span>
-        </a>
-        <!-- READY-TO-ENABLE: GitHub link (handle: __nullx2__). Set social.github.enabled = true in js/config.js to show. -->
-      </div>
+  <section class="profile-section" id="profile">
+    <div>
+      <p class="section-kicker" data-i18n="profileKicker">profile</p>
+      <h2 data-i18n="profileTitle">古い面倒を、新しい仕組みに変える。</h2>
     </div>
-  </div>
-</section>
+    <p data-i18n="profileBody">設計、実装、運用まで一気通貫で手を動かします。派手な理屈より、動くもの、測れるもの、続けられるものを重視します。伝統的な堅実さを土台にしつつ、AIや自動化で作業の重さを外へ逃がすのが得意です。</p>
+  </section>
 
+  <section class="skills-section" id="skills">
+    <div class="section-head">
+      <p class="section-kicker" data-i18n="skillsLabel">スキル</p>
+      <h2 data-i18n="skillsTitle">手を動かせる領域</h2>
+      <p data-i18n="skillsLead">設計から実装、運用まで。道具は目的に合わせて選びます。</p>
+    </div>
+    <ul class="skill-list" id="skill-list" aria-label="Skills"></ul>
+  </section>
+
+  <section class="works-section" id="works">
+    <div class="section-head">
+      <p class="section-kicker" data-i18n="worksLabel">制作物</p>
+      <h2 data-i18n="worksTitle">つくったもの</h2>
+      <p data-i18n="worksLead">カードを選択すると、短い紹介をFloating Cardで表示します。</p>
+    </div>
+    <div class="works-grid" id="works-grid"></div>
+    <aside class="floating-card" id="floating-card" role="dialog" aria-modal="false" aria-hidden="true">
+      <button class="floating-close" type="button" aria-label="紹介枠を閉じる">&times;</button>
+      <p class="floating-kicker">PROJECT BRIEF</p>
+      <h3></h3>
+      <p class="floating-desc"></p>
+      <div class="floating-tags"></div>
+      <a class="floating-link" target="_blank" rel="noopener noreferrer" data-i18n="openLink">リンクを開く</a>
+    </aside>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div>
+      <p class="section-kicker" data-i18n="contactLabel">contact</p>
+      <h2 data-i18n="contactTitle">相談は短くても構いません。</h2>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:contact@solo-map.app">contact@solo-map.app</a>
+      <a href="https://solo-map.app/">solo-map.app</a>
+      <a href="https://mcp.solo-map.app/">Solo Map MCP</a>
+    </div>
+  </section>
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="wrap">
-    <a class="brand" href="#top"><span class="chev" aria-hidden="true">&gt;_</span> jack-low</a>
-    <span class="cr">© <span id="footer-year">2026</span> jack-low — pfo.solo-map.app</span>
-    <button class="to-top" id="to-top" type="button" aria-label="ページトップへ戻る"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg></button>
-  </div>
+<footer class="site-footer">
+  <span>© <span id="year">2026</span> jack-low</span>
+  <span>pfo.solo-map.app</span>
 </footer>
 
-<div class="scanlines" aria-hidden="true"></div>
-
-<script src="js/config.js"></script>
-<script src="js/util.js"></script>
-<script src="js/works.js"></script>
-<script src="js/background.js"></script>
-<script src="js/neural.js"></script>
-<script src="js/scenes.js"></script>
-<script src="js/typing.js?v=20260614-1"></script>
-<script src="js/scroll.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/ui.js"></script>
+<script src="js/site.js"></script>
 </body>
 </html>
